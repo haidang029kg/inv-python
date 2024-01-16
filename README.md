@@ -16,11 +16,24 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Prerequisites
 
-What things you need to install the software and how to install them.
+1. install python with version from .python-version
+2. install poetry
+    -> pip install poetry
+3. poetry config to create virtual env inside the project directory
+    -> poetry config virtualenvs.in-project true
+4. active poetry shell
+    -> poetry shell
+5. install packages
+    -> poetry install
+6. active venv
+    -> source .venv/bin/activate
+    
+7. start server options
+    a. start server FastAPI
+        -> make server-fastapi
 
-```
-Examples
-```
+    b. start server gRPC
+        -> make server-grpc
 
 ## Deployment
 
