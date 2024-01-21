@@ -2,8 +2,8 @@
 line-length = 79
 target-version = ['py37', 'py38', 'py39']
 [tool.aerich]
-tortoise_orm = "settings.TORTOISE_ORM"
-location = "models/migrations"
+tortoise_orm = "src.settings.TORTOISE_ORM"
+location = "src/models/migrations"
 src_folder = "./."
 
 [tool.poetry]

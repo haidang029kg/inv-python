@@ -3,7 +3,10 @@ import uuid
 from datetime import datetime
 from typing import List, Union
 
-from models import (
+from pydantic import BaseModel
+from tortoise import Tortoise
+
+from src.models import (
     EntityStockStatusType,
     InventoryTransactionModel,
     PurchaseItemEntityModel,
@@ -11,10 +14,8 @@ from models import (
     PurchaseModel,
     TransactionType,
 )
-from pydantic import BaseModel
-from services.utils import bulk_create_model, chunk_size_splitter
-from settings import CHUNK_SIZE, TORTOISE_DEFAULT_CONN_NAME
-from tortoise import Tortoise
+from src.services.utils import bulk_create_model, chunk_size_splitter
+from src.settings import CHUNK_SIZE, TORTOISE_DEFAULT_CONN_NAME
 
 
 class CreatePurchaseItemReq(BaseModel):

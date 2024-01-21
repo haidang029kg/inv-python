@@ -2,16 +2,17 @@ import grpc
 import tortoise.transactions
 from generated import inventory_pb2, inventory_pb2_grpc
 from google.protobuf.timestamp_pb2 import Timestamp
-from models import SaleOrderStatusType
-from services.logger import logger
-from services.quantity import get_quantity
-from services.sale_order import (
+from tortoise.exceptions import IntegrityError
+
+from src.models import SaleOrderStatusType
+from src.services.logger import logger
+from src.services.quantity import get_quantity
+from src.services.sale_order import (
     CreateSaleOrderReq,
     CreateSaleOrderService,
     GetListSaleOrderService,
     SaleItemReq,
 )
-from tortoise.exceptions import IntegrityError
 
 
 class InventoryRpcServicer(inventory_pb2_grpc.InventoryServiceServicer):

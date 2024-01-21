@@ -1,7 +1,8 @@
 import tortoise.transactions  # noqa
 from fastapi import APIRouter
-from models import SaleOrderStatusType
-from services.sale_order import (
+
+from src.models import SaleOrderStatusType
+from src.services.sale_order import (
     AutoFillSaleOrder,
     GetListSaleOrderRes,
     GetListSaleOrderService,

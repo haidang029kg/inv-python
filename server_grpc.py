@@ -1,11 +1,12 @@
 import asyncio
 
 import grpc
-import settings
 from generated import hello_pb2_grpc, inventory_pb2_grpc
-from rpc_servicers import HelloServicer, InventoryRpcServicer
-from services.logger import logger
 from tortoise import Tortoise
+
+import src.settings as settings
+from src.api.grpc import HelloServicer, InventoryRpcServicer
+from src.services.logger import logger
 
 _LISTEN_ADDRESS_TEMPLATE = f"{settings.LISTEN_ADDRESS}:%s"
 

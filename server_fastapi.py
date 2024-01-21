@@ -1,13 +1,12 @@
 import asyncio
 
-import settings
 from fastapi import FastAPI
 from starlette.middleware import Middleware
 from starlette.middleware.cors import CORSMiddleware
 from tortoise import Tortoise
 
-from fast_routers import PurchaseRouter
-from fast_routers.sale_order import SaleOrderRouter
+import src.settings as settings
+from src.api.fastapi import PurchaseRouter, SaleOrderRouter
 
 middleware = [
     # TODO: change to specific origins

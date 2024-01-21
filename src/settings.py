@@ -24,9 +24,10 @@ TORTOISE_ORM = {
     "apps": {
         "inventory": {
             "models": [
+                # library models
                 "aerich.models",
-                #
-                "models",
+                # src models
+                "src.models",
             ],
             "default_connection": "default",
         },

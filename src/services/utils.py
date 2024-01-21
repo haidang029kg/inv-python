@@ -1,6 +1,6 @@
 from typing import List, Type, Union
 
-from models import PurchaseItemEntityModel, SaleOrderItemEntityModel
+from src.models import PurchaseItemEntityModel, SaleOrderItemEntityModel
 
 
 async def bulk_create_model(

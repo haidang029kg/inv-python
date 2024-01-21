@@ -19,7 +19,7 @@ gen-code:
 
 # Initialize Aerich for database migrations
 aerich-init:
-	aerich init -t settings.TORTOISE_ORM --location models/migrations
+	aerich init -t src.settings.TORTOISE_ORM --location src/models/migrations
 
 # Create an SSH tunnel to the database
 db-ssh-tunnel:

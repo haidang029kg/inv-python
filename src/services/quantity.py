@@ -1,9 +1,10 @@
 import uuid
 from typing import List, Union
 
-from models import InventoryTransactionModel
 from pydantic import BaseModel
 from tortoise.functions import Sum
+
+from src.models import InventoryTransactionModel
 
 
 class SkuQuantity(BaseModel):
