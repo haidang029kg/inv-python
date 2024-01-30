@@ -1,16 +1,12 @@
-# pet-store/inventory-api
-
-
+# pet-store/python-api
 
 ## Getting Started
 
 Download links:
 
-SSH clone URL: ssh://git@git.jetbrains.space/hungnguyen14fe/pet-store/inventory-api.git
+SSH clone URL: ssh://git@git.jetbrains.space/hungnguyen14fe/pet-store/python-api.git
 
-HTTPS clone URL: https://git.jetbrains.space/hungnguyen14fe/pet-store/inventory-api.git
-
-
+HTTPS clone URL: <https://git.jetbrains.space/hungnguyen14fe/pet-store/python-api.git>
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 

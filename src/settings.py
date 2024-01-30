@@ -15,7 +15,7 @@ VERSION = os.environ.get("BUILD_VERSION", "1")
 LISTEN_ADDRESS = os.environ.get("LISTEN_ADDRESS", "0.0.0.0")
 GRPC_PORT = os.environ.get("GRPC_PORT", "50051")
 #
-DATABASE_URI = os.environ.get("DATABASE_URI")
+DATABASE_URI = os.environ.get("DATABASE_URI") or 'postgres://postgres:postgres@localhost:5432/postgres'
 TORTOISE_DEFAULT_CONN_NAME = os.environ.get(
     "TORTOISE_DEFAULT_CONN_NAME", "default"
 )

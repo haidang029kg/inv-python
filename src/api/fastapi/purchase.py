@@ -27,13 +27,13 @@ class PurchaseRouter(APIRouter):
     def _init_routers(self):
         self.add_api_route(
             "/",
-            self._create_purchase,
-            methods=["POST"],
+            self._list_purchases,
+            methods=["GET"],
         )
         self.add_api_route(
             "/",
-            self._list_purchases,
-            methods=["GET"],
+            self._create_purchase,
+            methods=["POST"],
         )
         self.add_api_route(
             "/{purchase_id}/items/",

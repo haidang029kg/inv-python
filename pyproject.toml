@@ -7,7 +7,7 @@ location = "src/models/migrations"
 src_folder = "./."
 
 [tool.poetry]
-name = "pet-store-python-grpc"
+name = "python-api"
 version = "0.1.0"
 description = ""
 authors = ["Dang Vu <vnhd1995@gmail.com>"]

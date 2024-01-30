@@ -1,6 +1,6 @@
 # Variables
 PROTOC = protoc
-PROTO_DIR = ./protos
+PROTO_DIR = ./proto
 PROTO_FILES = $(wildcard $(PROTO_DIR)/*.proto)
 PROTO_OUT_DIR = ./generated
 
@@ -15,7 +15,7 @@ server-fastapi:
 
 # Generate the gRPC code
 gen-code:
-	python -m grpc_tools.protoc -I./protos --mypy_out=$(PROTO_OUT_DIR) --python_out=$(PROTO_OUT_DIR) --grpc_python_out=$(PROTO_OUT_DIR) $(PROTO_FILES)
+	python -m grpc_tools.protoc -I./proto --mypy_out=$(PROTO_OUT_DIR) --python_out=$(PROTO_OUT_DIR) --grpc_python_out=$(PROTO_OUT_DIR) $(PROTO_FILES)
 
 # Initialize Aerich for database migrations
 aerich-init:

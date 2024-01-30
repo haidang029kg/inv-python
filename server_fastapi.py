@@ -1,19 +1,19 @@
 import asyncio
 
 from fastapi import FastAPI
-from starlette.middleware import Middleware
 from starlette.middleware.cors import CORSMiddleware
 from tortoise import Tortoise
 
 import src.settings as settings
 from src.api.fastapi import PurchaseRouter, SaleOrderRouter
 
-middleware = [
-    # TODO: change to specific origins
-    Middleware(CORSMiddleware, allow_origins=["*"]),
-]
-app = FastAPI(
-    middleware=middleware, version=settings.VERSION, title="Pet Store"
+app = FastAPI(version=settings.VERSION, title="Pet Store")
+app.add_middleware(
+    CORSMiddleware,
+    # TODO: Change this to the frontend URL
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 
